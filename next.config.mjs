@@ -10,7 +10,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "wildlife-ledger-server.vercel.app",
+        hostname: "wildlife-ledger-server.onrender.com",
         pathname: "/uploads/**", // Correct for production
       },
     ],
