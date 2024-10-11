@@ -2,24 +2,24 @@
 
 ### What is Wildlife Ledger?
 
-Wildlife Ledger is a dynamic web application for managing animal listings and categories. It enables users to add new categories, upload animal details with images, and filter animals by category. The app is built with Next.js and integrates a backend API using Node.js, Express, and MongoDB, with file uploads handled by Multer.
+Wildlife Ledger is a dynamic web application for managing animal listings and categories. It enables users to add new categories, upload animal details with images, and filter animals by category. The app is built with Next.js and integrates a backend API using Node.js, Express, and MongoDB, with file uploads handled by Cloudinary.
 
 ### Features
 
-1. Built with Next.js, Tailwind CSS, Axios, Multer, Express, MongoDB
+1. Built with Next.js, Tailwind CSS, Axios, Express, MongoDB
 2. Dynamic category management and animal listing
-3. File uploads handled with Multer for animal images
+3. File uploads handled by Cloudinary for animal images
 4. Filtering functionality for animals by category
 5. Reusable form components for easy data entry
 
 ### Tools
 
 - [Next.js](https://nextjs.org/): A React framework for server-rendered applications.
-- [Multer](https://github.com/expressjs/multer): A middleware for handling `multipart/form-data`, primarily used for file uploads.
 - [Axios](https://axios-http.com/): A promise-based HTTP client for making API requests.
 - [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework for rapid UI development.
 - [Express.js](https://expressjs.com/): A minimal Node.js web application framework.
 - [MongoDB](https://www.mongodb.com/): A NoSQL database for flexible data management.
+- [Cloudinary](https://cloudinary.com/): A cloud-based image and video management service.
 
 ## Installation
 
@@ -40,15 +40,19 @@ Install the necessary packages for both the client and server
 npm install or npm i
 ```
 
-create a .env file in the server root with your MongoDB connection string
+create a .env file in the server root with your connection strings
 
-```bash
-MONGO_URI=your-mongo-connection-string
-```
+`MONGO_URI=your-mongo-connection-string`
+
+`CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name`
+
+`CLOUDINARY_API_KEY=your_cloudinary_api_key`
+
+`CLOUDINARY_API_SECRET=your_cloudinary_api_secret`
 
 In the client root, create a .env file with the example variable
 
-`NEXT_PUBLIC_BASE_URL=http://localhost:3000`
+`NEXT_PUBLIC_BASE_URL=http://localhost:8000`
 
 Start the Frontend & Backend development server
 
