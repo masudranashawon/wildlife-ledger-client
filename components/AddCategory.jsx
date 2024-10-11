@@ -9,7 +9,7 @@ const AddCategory = ({ setCategoryFormShow }) => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
   // category form submit
@@ -69,7 +69,7 @@ const AddCategory = ({ setCategoryFormShow }) => {
           className="bg-dark text-lg text-light  w-full p-3 rounded-xl"
           type="submit"
         >
-          Add Category
+          {isSubmitting ? "Adding" : "Add Category"}
         </button>
       </form>
     </section>

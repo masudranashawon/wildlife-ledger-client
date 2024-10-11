@@ -6,10 +6,10 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const AddAnimal = ({ setAnimalFormShow }) => {
-  const {
+  let {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm();
 
@@ -56,7 +56,7 @@ const AddAnimal = ({ setAnimalFormShow }) => {
       // for showing the toast properly
       setTimeout(() => {
         window.location.reload();
-      }, 300);
+      }, 100);
     } catch (error) {
       toast.error(error?.response?.data?.message || error?.message);
     }
@@ -129,7 +129,7 @@ const AddAnimal = ({ setAnimalFormShow }) => {
           type="submit"
           className="bg-dark text-lg text-light  w-full p-3 rounded-xl"
         >
-          Save
+          {!isSubmitting ? "Save" : "Saving.."}
         </button>
       </form>
     </section>

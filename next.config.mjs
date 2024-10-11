@@ -3,15 +3,9 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
-        hostname: "localhost",
-        port: "8080",
-        pathname: "/uploads/**", // Correct for local development
-      },
-      {
         protocol: "https",
-        hostname: "wildlife-ledger-server.onrender.com",
-        pathname: "/uploads/**", // Correct for production
+        hostname: "res.cloudinary.com",
+        pathname: "/drgxflcsb/image/upload/**",
       },
     ],
   },
