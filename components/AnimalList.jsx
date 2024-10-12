@@ -125,7 +125,7 @@ const AnimalList = ({ setAnimalFormShow, setCategoryFormShow }) => {
                   width={100}
                   height={100}
                   priority
-                  className="w-full h-40 object-contain"
+                  className="w-full h-40 object-none"
                 />
               </div>
               <p className="text-center mt-2 uppercase">{animal?.name}</p>
